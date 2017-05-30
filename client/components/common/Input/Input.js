@@ -1,4 +1,3 @@
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import './Input.sass';
 
 const Input = createReactClass ({

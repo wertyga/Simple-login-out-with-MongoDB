@@ -61,7 +61,7 @@ app.post('/new-user', (req, res) => {
                    res.json({token});
                }).catch(err => res.status(500).json({ global: 'Cant save new user' }))
            }
-       })
+       }).catch(err => res.status(500).json({ global: 'Cant connect to DataBase' }));
 });
 
 app.post('/login', (req, res) => {
@@ -89,7 +89,7 @@ app.post('/login', (req, res) => {
             } else {
                 res.status(401).json({ global: 'This user is not exist' })
             }
-        })
+        }).catch(err => res.status(500).json({ global: 'Cant connect to DataBase' }))
 });
 
 app.get('/*', (req, res) => {

@@ -5,6 +5,8 @@ import jwtDecode from 'jwt-decode';
 export const REDIRECT = 'REDIRECT';
 export const SET_CURRENT_USER = 'SET_CURRENT_USER';
 
+
+
 export function fetchUser(user) {
     return dispatch => {
         return axios.post('/new-user', user).then(res => {

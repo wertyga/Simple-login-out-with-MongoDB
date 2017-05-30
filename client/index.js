@@ -15,6 +15,7 @@ import { loginUser } from './actions/actions';
 import jwtDecode from 'jwt-decode';
 
 import './styles/index.sass';
+import './styles/bootstrapGrid.css';
 
 const store = createStore(
     rootReducer,

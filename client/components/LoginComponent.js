@@ -30,10 +30,11 @@ const RegComponent = createReactClass({
 
     onSubmitClick() {
         this.setState({ loading: true });
-        const {isValid, errors} = ValidateInput(Object.assign({}, this.state ));
+        const {isValid, errors} = ValidateInput(Object.assign({}, this.state, { newUser: true } ));
         if(!isValid) {
             this.setState({
-                errors
+                errors,
+                loading: false
             });
         } else {
             this.props.fetchUser(Object.assign({}, this.state, { newUser: true }))
@@ -43,26 +44,37 @@ const RegComponent = createReactClass({
                         password: '',
                         passwordConfirm: '',
                         email: '',
+                        loading: false,
                         errors: {}
 
                     });
                     this.props.logout(true);
                 })
-                .catch(err => this.setState({
-                    errors: err.response.data
-                }))
+                .catch(err => {
+                    this.setState({
+                        errors: err.response.data,
+                        loading: false
+                    });
+                    if(err.response.status === 405) {
+                        this.setState({
+                            loading: false,
+                            errors: {
+                                global: 'Cant connect to DataBase'
+                            }
+                        });
+                    }
+                })
         };
-        this.setState({ loading: false });
     },
 
     loginClick() {
         this.setState({ loading: true });
-
         const {errors, isValid} = ValidateInput(this.state);
 
-        if(false) {
+        if(!isValid) {
             this.setState({
-                errors
+                errors,
+                loading: false
             });
         } else {
             this.props.login(this.state)
@@ -79,12 +91,21 @@ const RegComponent = createReactClass({
 
                     this.props.logout(true);
                 })
-                .catch(err => this.setState({
-                    loading: false,
-                    errors: err.response.data
-                }))
+                .catch(err => {
+                    this.setState({
+                        loading: false,
+                        errors: err.response.data
+                    });
+                    if(err.response.status === 405) {
+                        this.setState({
+                            loading: false,
+                            errors: {
+                                global: 'Cant connect to DataBase'
+                            }
+                        });
+                    };
+                })
         }
-        this.setState({ loading: false });
     },
 
 
@@ -92,7 +113,7 @@ const RegComponent = createReactClass({
 
         return (
 
-            <div className={`LoginComponent ${this.props.className}`}>
+            <div className={'LoginComponent ' + this.props.className}>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">

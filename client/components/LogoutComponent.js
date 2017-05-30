@@ -30,7 +30,7 @@ const LogoutComponent = createReactClass ({
                                 <div className="row">
                                     <div className="col-md-12">
                                         <h1>LogoutComponent</h1>
-                                        <h3 style={{color: '#007fb1'}}>{`Hello ${this.props.name}`}</h3>
+                                        <h3 style={{color: '#007fb1'}}>{'Hello '  + this.props.name}</h3>
                                     </div>
                                 </div>
                             </div>

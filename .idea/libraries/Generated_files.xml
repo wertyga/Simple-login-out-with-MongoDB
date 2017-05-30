@@ -1,0 +1,32 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/webpack.config.js" />
+        <item url="file://$PROJECT_DIR$/dist/public/bundle.js" />
+        <item url="file://$PROJECT_DIR$/dist/server/index.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/public/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/clientBundle.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/mainBundle.js" />
+      <root url="file://$PROJECT_DIR$/dist/client/components/common/Input/Input.js" />
+      <root url="file://$PROJECT_DIR$/dist/client/components/common/Input/Input.js" />
+      <root url="file://$PROJECT_DIR$/dist/server/common/setTokenHeader.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/commons.js" />
+      <root url="file://$PROJECT_DIR$/dist/client/components/LoginComponent.js" />
+      <root url="file://$PROJECT_DIR$/dist/client/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/client/components/LogoutComponent.js" />
+      <root url="file://$PROJECT_DIR$/dist/server/common/setTokenHeader.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/commons.js" />
+      <root url="file://$PROJECT_DIR$/dist/client/components/LoginComponent.js" />
+      <root url="file://$PROJECT_DIR$/dist/client/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/client/components/LogoutComponent.js" />
+      <root url="file://$PROJECT_DIR$/dist/webpack.config.js" />
+      <root url="file://$PROJECT_DIR$/dist/public/bundle.js" />
+      <root url="file://$PROJECT_DIR$/dist/server/index.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
